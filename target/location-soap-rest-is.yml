@@ -1,0 +1,17 @@
+---
+apiVersion: "v1"
+kind: "List"
+items:
+- apiVersion: "image.openshift.io/v1"
+  kind: "ImageStream"
+  metadata:
+    name: "location-soap-rest"
+  spec:
+    lookupPolicy:
+      local: true
+    tags:
+    - from:
+        kind: "ImageStreamImage"
+        name: "location-soap-rest@sha256:3d26ce5e7bbd7d83fd776c4353960f198ede0cbed4e625f2fc957424106e113a"
+        namespace: "location-soap-rest"
+      name: "latest"

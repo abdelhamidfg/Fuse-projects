@@ -1,0 +1,17 @@
+---
+apiVersion: "v1"
+kind: "List"
+items:
+- apiVersion: "image.openshift.io/v1"
+  kind: "ImageStream"
+  metadata:
+    name: "camel-ose-springboot-xml"
+  spec:
+    lookupPolicy:
+      local: true
+    tags:
+    - from:
+        kind: "ImageStreamImage"
+        name: "camel-ose-springboot-xml@sha256:6fa170f22f59730052afffd50515e41d59dbe0d25b5ef72cd4d075cb24ba6806"
+        namespace: "location-soap-rest"
+      name: "latest"
